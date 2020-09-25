@@ -12,12 +12,10 @@ gridref <- substr(dat,9,14)
 df <- data.frame(year, gridref)
 dfu <- unique(df)
 
-# Prepare data frame with list
+# Prepare data frame with list of all 1-km squares in the UK
 rdasqs <- readLines("Z:/bbs/rdasqs")
 gridref <- substr(rdasqs,1,6)
-#country <- substr(rdasqs,16,16)
 rda <- substr(rdasqs,32,33)
-#rdadf <- data.frame(gridref, country, rda)
 rdadf <- data.frame(gridref, rda)
 
 # Merge data frames together 
